@@ -16,6 +16,7 @@ public final class ChooseYourCarPage extends BasePage {
     }
 
     public ChooseYourCarPage clickFindByMakeAndModelButton(){
+        this.waitForChooseYourCarPageToLoad();
         click(findByMakeAndModelButton,WaitStrategy.CLICKABLE,"FindBy Make And Model Button");
         return this;
     }

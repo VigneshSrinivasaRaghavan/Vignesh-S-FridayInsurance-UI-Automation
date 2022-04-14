@@ -15,6 +15,7 @@ public final class ModelPage extends BasePage {
     }
 
     public ModelPage searchModel(String text){
+        this.waitForModelPageToLoad();
         sendKeys(modelSearchBar,text,WaitStrategy.VISIBLE,"Car Model SearchBar");
         return this;
     }

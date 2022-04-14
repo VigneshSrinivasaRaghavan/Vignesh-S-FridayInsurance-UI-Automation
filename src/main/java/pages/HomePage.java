@@ -1,9 +1,7 @@
 package pages;
 
 import enums.WaitStrategy;
-import factories.ExplicitWaitFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public final class HomePage extends BasePage {
 
@@ -18,6 +16,7 @@ public final class HomePage extends BasePage {
     }
 
     public HomePage clickCarIsAlreadyInsuredRadioButton(){
+        this.waitForHomePageToLoad();
         click(carIsAlreadyInsuredRadioButton,WaitStrategy.CLICKABLE,"Car Is Already Insured Radio Button");
         return this;
     }

@@ -17,6 +17,7 @@ public final class OwnerDetailsPage extends BasePage {
     }
 
     public OwnerDetailsPage selectOwnerOfCar(String text){
+        this.waitForOwnerDetailsPageToLoad();
         if(text.equalsIgnoreCase("yes")){
             click(ownerOfCarYesRadioButton,WaitStrategy.CLICKABLE,"Owner of the Car - Yes Radio Button");
         }

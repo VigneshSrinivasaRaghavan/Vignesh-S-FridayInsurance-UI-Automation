@@ -16,6 +16,7 @@ public final class FirstRegistrationPage extends BasePage {
     }
 
     public FirstRegistrationPage enterFirstRegistrationDate(String text){
+        this.waitForRegistrationPageToLoad();
         sendKeys(firstRegistrationDate,text,WaitStrategy.VISIBLE,"First Registration Date");
         return this;
     }

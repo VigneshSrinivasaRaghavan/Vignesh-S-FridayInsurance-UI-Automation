@@ -11,6 +11,7 @@ public final class CarIncludedPage extends BasePage {
     }
 
     public FirstRegistrationPage selectCarIncluded(String carIncludedText){
+        waitForElementToLoad(constructCarIncludedXpath(carIncludedText),WaitStrategy.VISIBLE);
         click(constructCarIncludedXpath(carIncludedText), WaitStrategy.CLICKABLE,"Car Included Number "+carIncludedText);
         return new FirstRegistrationPage();
     }

@@ -11,6 +11,7 @@ public final class FuelPage extends BasePage {
     }
 
     public HpPage selectFuel(String fuelText){
+        waitForElementToLoad(constructFuelXpath(fuelText),WaitStrategy.VISIBLE);
         click(constructFuelXpath(fuelText), WaitStrategy.CLICKABLE,"Fuel type "+fuelText);
         return new HpPage();
     }

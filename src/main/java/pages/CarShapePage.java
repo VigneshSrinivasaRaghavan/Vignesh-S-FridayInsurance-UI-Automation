@@ -11,6 +11,7 @@ public final class CarShapePage extends BasePage {
     }
 
     public FuelPage selectCarShape(String carShapeText){
+        waitForElementToLoad(constructCarShapeXpath(carShapeText),WaitStrategy.VISIBLE);
         click(constructCarShapeXpath(carShapeText), WaitStrategy.CLICKABLE,"Car Shape "+carShapeText);
         return new FuelPage();
     }

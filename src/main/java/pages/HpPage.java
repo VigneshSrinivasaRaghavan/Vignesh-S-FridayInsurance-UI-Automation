@@ -11,6 +11,7 @@ public final class HpPage extends BasePage {
     }
 
     public CarIncludedPage selectHp(String hpText){
+        waitForElementToLoad(constructHpXpath(hpText),WaitStrategy.VISIBLE);
         click(constructHpXpath(hpText), WaitStrategy.CLICKABLE,"HorsePower "+hpText);
         return new CarIncludedPage();
     }
